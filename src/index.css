@@ -84,11 +84,27 @@
 
 @layer utilities {
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg dark:bg-white/5 dark:backdrop-blur-md dark:border-white/10 light:bg-black/5 light:backdrop-blur-md light:border-black/10;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+    
+    .dark & {
+      @apply bg-white/5 backdrop-blur-md border-white/10;
+    }
+    
+    :root:not(.dark) & {
+      @apply bg-black/5 backdrop-blur-md border-black/10;
+    }
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-black/40 border border-white/10 dark:bg-black/40 dark:border-white/10 light:bg-white/40 light:border-black/10;
+    @apply backdrop-blur-2xl bg-black/40 border border-white/10;
+    
+    .dark & {
+      @apply bg-black/40 border-white/10;
+    }
+    
+    :root:not(.dark) & {
+      @apply bg-white/40 border-black/10;
+    }
   }
   
   .text-gradient {
