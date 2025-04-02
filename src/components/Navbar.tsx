@@ -4,8 +4,13 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import LanguageSelector from '@/components/LanguageSelector';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const Navbar = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,10 +27,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', to: '/' },
-    { name: 'Projects', to: '/projects' },
-    { name: 'About', to: '/about' },
-    { name: 'Contact', to: '/contact' }
+    { name: t('navbar.home'), to: '/' },
+    { name: t('navbar.projects'), to: '/projects' },
+    { name: t('navbar.about'), to: '/about' },
+    { name: t('navbar.contact'), to: '/contact' }
   ];
 
   return (
@@ -51,14 +56,16 @@ const Navbar = () => {
         </nav>
         
         <div className="hidden md:flex items-center gap-3">
+          <LanguageSelector />
           <ThemeToggle />
           <Button variant="ghost" className="items-center gap-2 border border-primary/20 hover:bg-primary/10">
-            <span>Resume</span>
+            <span>{t('navbar.resume')}</span>
           </Button>
         </div>
         
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
+          <LanguageSelector />
           <ThemeToggle />
           <button
             className="text-foreground"
@@ -71,7 +78,7 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden neo-blur absolute top-full left-0 w-full p-4">
+        <div className={`md:hidden neo-blur absolute top-full left-0 w-full p-4 ${isRTL ? 'text-right' : 'text-left'}`}>
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
@@ -84,7 +91,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="default" className="w-full mt-2">
-              Resume
+              {t('navbar.resume')}
             </Button>
           </div>
         </div>

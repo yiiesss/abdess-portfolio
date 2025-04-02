@@ -1,0 +1,165 @@
+
+{
+  "navbar": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À Propos",
+    "contact": "Contact",
+    "resume": "CV"
+  },
+  "hero": {
+    "welcome": "Bienvenue sur mon portfolio",
+    "title1": "Développeur Full-Stack",
+    "title2": "Création de Solutions Numériques",
+    "description": "Spécialisé dans la création d'applications professionnelles pour les secteurs de la santé, de l'agriculture et du commerce de détail. Transformation d'exigences complexes en solutions élégantes et conviviales.",
+    "exploreProjects": "Explorer les Projets",
+    "contactMe": "Me Contacter",
+    "scroll": "Faites défiler pour explorer"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Code Propre",
+      "description": "Solutions maintenables et bien structurées qui évoluent avec votre entreprise"
+    },
+    "modernStack": {
+      "title": "Stack Moderne",
+      "description": "Utilisation des dernières technologies pour le développement d'applications robustes"
+    },
+    "domainExpertise": {
+      "title": "Expertise Sectorielle",
+      "description": "Connaissance spécialisée dans les secteurs de la santé, de l'agriculture et du commerce de détail"
+    }
+  },
+  "projects": {
+    "title": "Projets en Vedette",
+    "subtitle": "Portfolio",
+    "description": "Découvrez mon portfolio d'applications d'entreprise spécialisées conçues pour rationaliser les opérations et améliorer la productivité dans différents secteurs.",
+    "viewProject": "Voir le Projet",
+    "comingSoon": "Bientôt Disponible",
+    "projects": [
+      {
+        "title": "Système de Gestion de Cabinet Médical",
+        "description": "Une solution complète pour les hôpitaux et les cliniques pour gérer les médicaments, l'équipement et les fournitures avec suivi en temps réel et analyses.",
+        "tags": ["Santé", "Inventaire", "Analyses"]
+      },
+      {
+        "title": "Système de Gestion Avicole",
+        "description": "Plateforme de bout en bout pour les fermes avicoles pour suivre la consommation d'aliments, les métriques de santé et les rendements de production avec analyses prédictives.",
+        "tags": ["Agriculture", "IoT", "Tableau de bord"]
+      },
+      {
+        "title": "Inventaire et CRM pour Bijouterie",
+        "description": "Solution intégrée pour les détaillants de bijoux pour gérer l'inventaire, les relations clients et les ventes via une interface intuitive.",
+        "tags": ["Commerce", "CRM", "E-commerce"]
+      }
+    ]
+  },
+  "about": {
+    "title": "À",
+    "me": "Propos",
+    "description1": "Je me spécialise dans la création de solutions clé en main qui s'alignent parfaitement sur les objectifs commerciaux des clients. Mon objectif est de fournir des applications complètes et de haute qualité qui fonctionnent parfaitement dès le premier jour.",
+    "description2": "Avec un engagement à comprendre vos exigences uniques, je construis des logiciels personnalisés qui résolvent de véritables défis commerciaux tout en maintenant une qualité de code et une expérience utilisateur exceptionnelles.",
+    "description3": "Mon approche combine l'excellence technique avec un fort accent sur la fiabilité et la performance, garantissant que chaque solution que je livre est robuste, évolutive et véritablement sans erreur.",
+    "stats": {
+      "experience": "Années d'Expérience",
+      "projects": "Projets",
+      "clients": "Clients",
+      "satisfaction": "Satisfaction"
+    },
+    "skills": {
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "description": "Solutions complètes couvrant les technologies frontend, backend et bases de données"
+      },
+      "qa": {
+        "title": "Assurance Qualité",
+        "description": "Méthodologies de test rigoureuses garantissant des applications fiables et sans erreurs"
+      },
+      "clientFocused": {
+        "title": "Approche Centrée Client",
+        "description": "Solutions adaptées à vos exigences et objectifs commerciaux spécifiques"
+      },
+      "innovation": {
+        "title": "Solutions Innovantes",
+        "description": "Exploitation des technologies de pointe pour fournir des applications modernes et efficaces"
+      },
+      "security": {
+        "title": "Sécurité et Performance",
+        "description": "Applications construites avec les meilleures pratiques de sécurité et optimisées pour la performance"
+      },
+      "delivery": {
+        "title": "Livraison de Bout en Bout",
+        "description": "Gestion complète du projet du concept au déploiement et à la maintenance"
+      }
+    }
+  },
+  "contact": {
+    "title": "Entrez en",
+    "highlight": "Contact",
+    "description": "Vous avez un projet en tête ou vous souhaitez discuter d'une collaboration potentielle ? Je suis toujours ouvert à de nouvelles opportunités et défis.",
+    "email": {
+      "title": "Email",
+      "action": "Envoyer un email"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "action": "Appelez-moi"
+    },
+    "location": {
+      "title": "Localisation",
+      "remote": "Disponible pour le travail à distance"
+    },
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours..."
+    },
+    "success": "Message envoyé !",
+    "successDescription": "Merci pour votre message. Je vous répondrai bientôt."
+  },
+  "footer": {
+    "description": "Spécialisé dans la création d'applications d'entreprise pour les secteurs de la santé, de l'agriculture et du commerce de détail, transformant des exigences complexes en solutions élégantes.",
+    "quickLinks": "Liens Rapides",
+    "services": "Services",
+    "servicesList": {
+      "healthcare": "Logiciels de Santé",
+      "agriculture": "Gestion Agricole",
+      "retail": "Systèmes CRM et de Commerce",
+      "custom": "Développement Personnalisé"
+    },
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation"
+  },
+  "pages": {
+    "about": {
+      "title": "À",
+      "highlight": "Propos",
+      "description": "En savoir plus sur mon parcours, mes compétences et mon expérience dans le développement d'applications spécialisées pour divers secteurs."
+    },
+    "projects": {
+      "title": "Mes",
+      "highlight": "Projets",
+      "description": "Explorez mon portfolio d'applications d'entreprise spécialisées conçues pour les secteurs de la santé, de l'agriculture et du commerce. Chaque projet représente une solution unique à des défis commerciaux complexes."
+    },
+    "contact": {
+      "title": "Contactez",
+      "highlight": "Moi",
+      "description": "Vous avez un projet en tête ou vous souhaitez discuter d'une collaboration potentielle ? Contactez-moi en utilisant le formulaire ci-dessous."
+    },
+    "notFound": {
+      "title": "Page Non Trouvée",
+      "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+      "backHome": "Retour à l'Accueil"
+    }
+  },
+  "language": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "ar": "Arabe"
+  }
+}

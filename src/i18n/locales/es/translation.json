@@ -1,0 +1,165 @@
+
+{
+  "navbar": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre Mí",
+    "contact": "Contacto",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "welcome": "Bienvenido a mi portafolio",
+    "title1": "Desarrollador Full-Stack",
+    "title2": "Creando Soluciones Digitales",
+    "description": "Especializado en crear aplicaciones profesionales para sectores de salud, agricultura y comercio minorista. Transformando requisitos complejos en soluciones elegantes y fáciles de usar.",
+    "exploreProjects": "Explorar Proyectos",
+    "contactMe": "Contáctame",
+    "scroll": "Desplázate para explorar"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Código Limpio",
+      "description": "Soluciones mantenibles y bien estructuradas que escalan con tu negocio"
+    },
+    "modernStack": {
+      "title": "Stack Moderno",
+      "description": "Utilizando las últimas tecnologías para el desarrollo de aplicaciones robustas"
+    },
+    "domainExpertise": {
+      "title": "Experiencia Sectorial",
+      "description": "Conocimiento especializado en los sectores de salud, agricultura y comercio minorista"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Portafolio",
+    "description": "Descubre mi portafolio de aplicaciones empresariales especializadas diseñadas para optimizar operaciones y mejorar la productividad en diferentes industrias.",
+    "viewProject": "Ver Proyecto",
+    "comingSoon": "Próximamente",
+    "projects": [
+      {
+        "title": "Sistema de Gestión de Gabinete Médico",
+        "description": "Una solución integral para hospitales y clínicas para gestionar medicamentos, equipos y suministros con seguimiento en tiempo real y análisis.",
+        "tags": ["Salud", "Inventario", "Análisis"]
+      },
+      {
+        "title": "Sistema de Gestión Avícola",
+        "description": "Plataforma integral para granjas avícolas para rastrear el consumo de alimento, métricas de salud y rendimientos de producción con análisis predictivo.",
+        "tags": ["Agricultura", "IoT", "Tablero"]
+      },
+      {
+        "title": "Inventario y CRM para Joyería",
+        "description": "Solución integrada para minoristas de joyería para gestionar inventario, relaciones con clientes y ventas a través de una interfaz intuitiva.",
+        "tags": ["Comercio", "CRM", "E-commerce"]
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre",
+    "me": "Mí",
+    "description1": "Me especializo en crear soluciones llave en mano que se alinean perfectamente con los objetivos comerciales de los clientes. Mi enfoque está en entregar aplicaciones completas y de alta calidad que funcionen perfectamente desde el primer día.",
+    "description2": "Con un compromiso para entender tus requisitos únicos, desarrollo software personalizado que resuelve desafíos empresariales reales mientras mantiene una calidad de código y experiencia de usuario excepcionales.",
+    "description3": "Mi enfoque combina excelencia técnica con un fuerte énfasis en fiabilidad y rendimiento, asegurando que cada solución que entrego sea robusta, escalable y verdaderamente libre de errores.",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "projects": "Proyectos",
+      "clients": "Clientes",
+      "satisfaction": "Satisfacción"
+    },
+    "skills": {
+      "fullstack": {
+        "title": "Desarrollo Full-Stack",
+        "description": "Soluciones integrales que abarcan tecnologías de frontend, backend y bases de datos"
+      },
+      "qa": {
+        "title": "Aseguramiento de Calidad",
+        "description": "Metodologías rigurosas de prueba que garantizan aplicaciones confiables y sin errores"
+      },
+      "clientFocused": {
+        "title": "Enfoque Centrado en el Cliente",
+        "description": "Soluciones adaptadas a tus requisitos y objetivos comerciales específicos"
+      },
+      "innovation": {
+        "title": "Soluciones Innovadoras",
+        "description": "Aprovechando las tecnologías más avanzadas para ofrecer aplicaciones modernas y eficientes"
+      },
+      "security": {
+        "title": "Seguridad y Rendimiento",
+        "description": "Aplicaciones construidas con las mejores prácticas de seguridad y optimizadas para el rendimiento"
+      },
+      "delivery": {
+        "title": "Entrega de Principio a Fin",
+        "description": "Gestión completa de proyectos desde el concepto hasta la implementación y mantenimiento"
+      }
+    }
+  },
+  "contact": {
+    "title": "Ponte en",
+    "highlight": "Contacto",
+    "description": "¿Tienes un proyecto en mente o quieres discutir una posible colaboración? Siempre estoy abierto a nuevas oportunidades y desafíos.",
+    "email": {
+      "title": "Correo",
+      "action": "Enviar un correo"
+    },
+    "phone": {
+      "title": "Teléfono",
+      "action": "Llámame"
+    },
+    "location": {
+      "title": "Ubicación",
+      "remote": "Disponible para trabajo remoto"
+    },
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "success": "¡Mensaje enviado!",
+    "successDescription": "Gracias por tu mensaje. Me pondré en contacto contigo pronto."
+  },
+  "footer": {
+    "description": "Especializado en crear aplicaciones empresariales para sectores de salud, agricultura y comercio minorista, transformando requisitos complejos en soluciones elegantes.",
+    "quickLinks": "Enlaces Rápidos",
+    "services": "Servicios",
+    "servicesList": {
+      "healthcare": "Software para Salud",
+      "agriculture": "Gestión Agrícola",
+      "retail": "Sistemas de CRM y Comercio",
+      "custom": "Desarrollo Personalizado"
+    },
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "pages": {
+    "about": {
+      "title": "Sobre",
+      "highlight": "Mí",
+      "description": "Aprende más sobre mi formación, habilidades y experiencia en el desarrollo de aplicaciones especializadas para diversas industrias."
+    },
+    "projects": {
+      "title": "Mis",
+      "highlight": "Proyectos",
+      "description": "Explora mi portafolio de aplicaciones empresariales especializadas diseñadas para sectores de salud, agricultura y comercio. Cada proyecto representa una solución única a desafíos empresariales complejos."
+    },
+    "contact": {
+      "title": "Contáctame",
+      "highlight": "",
+      "description": "¿Tienes un proyecto en mente o quieres discutir una posible colaboración? Ponte en contacto usando el formulario a continuación."
+    },
+    "notFound": {
+      "title": "Página No Encontrada",
+      "description": "La página que estás buscando no existe o ha sido movida.",
+      "backHome": "Volver al Inicio"
+    }
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "ar": "Árabe"
+  }
+}

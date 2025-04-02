@@ -8,41 +8,46 @@ import {
   ShieldCheck, 
   Rocket 
 } from "lucide-react";
-
-const skills = [
-  {
-    icon: <Code className="w-6 h-6 text-primary" />,
-    title: "Full-Stack Development",
-    description: "Comprehensive solutions spanning frontend, backend, and database technologies"
-  },
-  {
-    icon: <CheckCircle className="w-6 h-6 text-primary" />,
-    title: "Quality Assurance",
-    description: "Rigorous testing methodologies ensuring bug-free, reliable applications"
-  },
-  {
-    icon: <Target className="w-6 h-6 text-primary" />,
-    title: "Client-Focused Approach",
-    description: "Solutions tailored to your specific business requirements and goals"
-  },
-  {
-    icon: <Sparkles className="w-6 h-6 text-primary" />,
-    title: "Innovative Solutions",
-    description: "Leveraging cutting-edge technologies to deliver modern, efficient applications"
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6 text-primary" />,
-    title: "Security & Performance",
-    description: "Applications built with security best practices and optimized for performance"
-  },
-  {
-    icon: <Rocket className="w-6 h-6 text-primary" />,
-    title: "End-to-End Delivery",
-    description: "Complete project management from concept to deployment and maintenance"
-  }
-];
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
+  const skills = [
+    {
+      icon: <Code className="w-6 h-6 text-primary" />,
+      title: t('about.skills.fullstack.title'),
+      description: t('about.skills.fullstack.description')
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6 text-primary" />,
+      title: t('about.skills.qa.title'),
+      description: t('about.skills.qa.description')
+    },
+    {
+      icon: <Target className="w-6 h-6 text-primary" />,
+      title: t('about.skills.clientFocused.title'),
+      description: t('about.skills.clientFocused.description')
+    },
+    {
+      icon: <Sparkles className="w-6 h-6 text-primary" />,
+      title: t('about.skills.innovation.title'),
+      description: t('about.skills.innovation.description')
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6 text-primary" />,
+      title: t('about.skills.security.title'),
+      description: t('about.skills.security.description')
+    },
+    {
+      icon: <Rocket className="w-6 h-6 text-primary" />,
+      title: t('about.skills.delivery.title'),
+      description: t('about.skills.delivery.description')
+    }
+  ];
+
   return (
     <section className="py-20 relative" id="about">
       {/* Background gradient */}
@@ -52,41 +57,41 @@ const AboutSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className={isRTL ? "order-2" : ""}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About <span className="text-gradient-primary">Me</span>
+              {t('about.title')} <span className="text-gradient-primary">{t('about.me')}</span>
             </h2>
             <p className="text-foreground/80 mb-4">
-              I specialize in creating turnkey solutions that perfectly align with clients' business objectives. My focus is on delivering complete, high-quality applications that work flawlessly from day one.
+              {t('about.description1')}
             </p>
             <p className="text-foreground/80 mb-4">
-              With a commitment to understanding your unique requirements, I build custom software that solves real business challenges while maintaining exceptional code quality and user experience.
+              {t('about.description2')}
             </p>
             <p className="text-foreground/80 mb-6">
-              My approach combines technical excellence with a strong emphasis on reliability and performance, ensuring that every solution I deliver is robust, scalable, and truly bug-free.
+              {t('about.description3')}
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="text-center">
                 <span className="block text-3xl font-bold text-gradient-primary">5+</span>
-                <span className="text-sm text-foreground/70">Years Experience</span>
+                <span className="text-sm text-foreground/70">{t('about.stats.experience')}</span>
               </div>
               <div className="text-center">
                 <span className="block text-3xl font-bold text-gradient-primary">20+</span>
-                <span className="text-sm text-foreground/70">Projects</span>
+                <span className="text-sm text-foreground/70">{t('about.stats.projects')}</span>
               </div>
               <div className="text-center">
                 <span className="block text-3xl font-bold text-gradient-primary">15+</span>
-                <span className="text-sm text-foreground/70">Clients</span>
+                <span className="text-sm text-foreground/70">{t('about.stats.clients')}</span>
               </div>
               <div className="text-center">
                 <span className="block text-3xl font-bold text-gradient-primary">100%</span>
-                <span className="text-sm text-foreground/70">Satisfaction</span>
+                <span className="text-sm text-foreground/70">{t('about.stats.satisfaction')}</span>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${isRTL ? "order-1" : ""}`}>
             {skills.map((skill, index) => (
               <Card key={index} className="glass-card p-6">
                 <div className="mb-4">{skill.icon}</div>

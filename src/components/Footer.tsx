@@ -1,8 +1,12 @@
 
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -14,8 +18,7 @@ const Footer = () => {
               DevPortfolio
             </Link>
             <p className="text-foreground/70 mb-6 max-w-md">
-              Specialized in creating business applications for healthcare, agriculture, and 
-              retail industries, transforming complex requirements into elegant solutions.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a 
@@ -46,52 +49,52 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Quick Links</h3>
+            <h3 className="font-medium text-lg mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Home
+                  {t('navbar.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Projects
+                  {t('navbar.projects')}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-foreground/70 hover:text-foreground transition-colors">
-                  About
+                  {t('navbar.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Contact
+                  {t('navbar.contact')}
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Services</h3>
+            <h3 className="font-medium text-lg mb-4">{t('footer.services')}</h3>
             <ul className="space-y-3">
-              <li className="text-foreground/70">Healthcare Software</li>
-              <li className="text-foreground/70">Agriculture Management</li>
-              <li className="text-foreground/70">Retail & CRM Systems</li>
-              <li className="text-foreground/70">Custom Development</li>
+              <li className="text-foreground/70">{t('footer.servicesList.healthcare')}</li>
+              <li className="text-foreground/70">{t('footer.servicesList.agriculture')}</li>
+              <li className="text-foreground/70">{t('footer.servicesList.retail')}</li>
+              <li className="text-foreground/70">{t('footer.servicesList.custom')}</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/50 text-sm">
-            © {currentYear} DevPortfolio. All rights reserved.
+            © {currentYear} DevPortfolio. {t('footer.rights')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-foreground/50 hover:text-foreground/80 transition-colors">
-              Privacy Policy
+              {t('footer.privacy')}
             </Link>
             <Link to="/terms" className="text-sm text-foreground/50 hover:text-foreground/80 transition-colors">
-              Terms of Service
+              {t('footer.terms')}
             </Link>
           </div>
         </div>

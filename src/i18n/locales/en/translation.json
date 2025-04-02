@@ -1,0 +1,165 @@
+
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "welcome": "Welcome to my portfolio",
+    "title1": "Full-Stack Developer",
+    "title2": "Crafting Digital Solutions",
+    "description": "Specializing in creating professional applications for healthcare, agriculture, and retail industries. Turning complex business requirements into elegant, user-friendly solutions.",
+    "exploreProjects": "Explore Projects",
+    "contactMe": "Contact Me",
+    "scroll": "Scroll to explore"
+  },
+  "features": {
+    "cleanCode": {
+      "title": "Clean Code",
+      "description": "Maintainable, well-structured solutions that scale with your business"
+    },
+    "modernStack": {
+      "title": "Modern Stack",
+      "description": "Utilizing the latest technologies for robust application development"
+    },
+    "domainExpertise": {
+      "title": "Domain Expertise",
+      "description": "Specialized knowledge in healthcare, agriculture, and retail sectors"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Portfolio",
+    "description": "Discover my portfolio of specialized business applications designed to streamline operations and enhance productivity across different industries.",
+    "viewProject": "View Project",
+    "comingSoon": "Coming Soon",
+    "projects": [
+      {
+        "title": "Medical Cabinet Management System",
+        "description": "A comprehensive solution for hospitals and clinics to manage medications, equipment, and supplies with real-time tracking and analytics.",
+        "tags": ["Healthcare", "Inventory", "Analytics"]
+      },
+      {
+        "title": "Poultry Management System",
+        "description": "End-to-end platform for poultry farms to track feed consumption, health metrics, and production yields with predictive analytics.",
+        "tags": ["Agriculture", "IoT", "Dashboard"]
+      },
+      {
+        "title": "Jewelry Shop Inventory & CRM",
+        "description": "Integrated solution for jewelry retailers to manage inventory, customer relationships, and sales through an intuitive interface.",
+        "tags": ["Retail", "CRM", "E-commerce"]
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "me": "Me",
+    "description1": "I specialize in creating turnkey solutions that perfectly align with clients' business objectives. My focus is on delivering complete, high-quality applications that work flawlessly from day one.",
+    "description2": "With a commitment to understanding your unique requirements, I build custom software that solves real business challenges while maintaining exceptional code quality and user experience.",
+    "description3": "My approach combines technical excellence with a strong emphasis on reliability and performance, ensuring that every solution I deliver is robust, scalable, and truly bug-free.",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects",
+      "clients": "Clients",
+      "satisfaction": "Satisfaction"
+    },
+    "skills": {
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "Comprehensive solutions spanning frontend, backend, and database technologies"
+      },
+      "qa": {
+        "title": "Quality Assurance",
+        "description": "Rigorous testing methodologies ensuring bug-free, reliable applications"
+      },
+      "clientFocused": {
+        "title": "Client-Focused Approach",
+        "description": "Solutions tailored to your specific business requirements and goals"
+      },
+      "innovation": {
+        "title": "Innovative Solutions",
+        "description": "Leveraging cutting-edge technologies to deliver modern, efficient applications"
+      },
+      "security": {
+        "title": "Security & Performance",
+        "description": "Applications built with security best practices and optimized for performance"
+      },
+      "delivery": {
+        "title": "End-to-End Delivery",
+        "description": "Complete project management from concept to deployment and maintenance"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In",
+    "highlight": "Touch",
+    "description": "Have a project in mind or want to discuss a potential collaboration? I'm always open to new opportunities and challenges.",
+    "email": {
+      "title": "Email",
+      "action": "Send an email"
+    },
+    "phone": {
+      "title": "Phone",
+      "action": "Call me"
+    },
+    "location": {
+      "title": "Location",
+      "remote": "Available for remote work"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": "Message sent!",
+    "successDescription": "Thank you for your message. I'll get back to you soon."
+  },
+  "footer": {
+    "description": "Specialized in creating business applications for healthcare, agriculture, and retail industries, transforming complex requirements into elegant solutions.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "servicesList": {
+      "healthcare": "Healthcare Software",
+      "agriculture": "Agriculture Management",
+      "retail": "Retail & CRM Systems",
+      "custom": "Custom Development"
+    },
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "pages": {
+    "about": {
+      "title": "About",
+      "highlight": "Me",
+      "description": "Learn more about my background, skills, and experience in developing specialized applications for various industries."
+    },
+    "projects": {
+      "title": "My",
+      "highlight": "Projects",
+      "description": "Explore my portfolio of specialized business applications designed for healthcare, agriculture, and retail industries. Each project represents a unique solution to complex business challenges."
+    },
+    "contact": {
+      "title": "Contact",
+      "highlight": "Me",
+      "description": "Have a project in mind or want to discuss potential collaboration? Get in touch using the contact form below."
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for does not exist or has been moved.",
+      "backHome": "Back to Home"
+    }
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "ar": "Arabic"
+  }
+}

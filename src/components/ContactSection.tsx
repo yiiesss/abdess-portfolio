@@ -5,8 +5,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const ContactSection = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -31,8 +35,8 @@ const ContactSection = () => {
     // Simulate sending the message
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: t('contact.success'),
+        description: t('contact.successDescription'),
       });
       setFormData({
         name: '',
@@ -54,68 +58,67 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="text-gradient-primary">Touch</span>
+            {t('contact.title')} <span className="text-gradient-primary">{t('contact.highlight')}</span>
           </h2>
           <p className="text-foreground/70">
-            Have a project in mind or want to discuss a potential collaboration? 
-            I'm always open to new opportunities and challenges.
+            {t('contact.description')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2 space-y-8">
+          <div className={`lg:col-span-2 space-y-8 ${isRTL ? 'order-2' : 'order-1'}`}>
             <div className="glass-card p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
+              <div className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''} space-x-4`}>
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-medium text-lg mb-1">Email</h3>
+                <div className={isRTL ? 'text-right mr-4' : ''}>
+                  <h3 className="font-medium text-lg mb-1">{t('contact.email.title')}</h3>
                   <p className="text-foreground/70">contact@example.com</p>
                   <a href="mailto:contact@example.com" className="text-primary text-sm hover:underline mt-1 inline-block">
-                    Send an email
+                    {t('contact.email.action')}
                   </a>
                 </div>
               </div>
             </div>
             
             <div className="glass-card p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
+              <div className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''} space-x-4`}>
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-medium text-lg mb-1">Phone</h3>
+                <div className={isRTL ? 'text-right mr-4' : ''}>
+                  <h3 className="font-medium text-lg mb-1">{t('contact.phone.title')}</h3>
                   <p className="text-foreground/70">+1 (555) 123-4567</p>
                   <a href="tel:+15551234567" className="text-primary text-sm hover:underline mt-1 inline-block">
-                    Call me
+                    {t('contact.phone.action')}
                   </a>
                 </div>
               </div>
             </div>
             
             <div className="glass-card p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
+              <div className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''} space-x-4`}>
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-medium text-lg mb-1">Location</h3>
+                <div className={isRTL ? 'text-right mr-4' : ''}>
+                  <h3 className="font-medium text-lg mb-1">{t('contact.location.title')}</h3>
                   <p className="text-foreground/70">New York, NY</p>
                   <span className="text-primary text-sm mt-1 inline-block">
-                    Available for remote work
+                    {t('contact.location.remote')}
                   </span>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="lg:col-span-3">
+          <div className={`lg:col-span-3 ${isRTL ? 'order-1' : 'order-2'}`}>
             <form onSubmit={handleSubmit} className="glass-card p-8 rounded-xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Your Name
+                    {t('contact.form.name')}
                   </label>
                   <Input
                     id="name"
@@ -128,7 +131,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Your Email
+                    {t('contact.form.email')}
                   </label>
                   <Input
                     id="email"
@@ -144,7 +147,7 @@ const ContactSection = () => {
               
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
+                  {t('contact.form.subject')}
                 </label>
                 <Input
                   id="subject"
@@ -158,7 +161,7 @@ const ContactSection = () => {
               
               <div className="mb-6">
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <Textarea
                   id="message"
@@ -175,8 +178,8 @@ const ContactSection = () => {
                 className="w-full animated-gradient"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-                <Send className="ml-2 h-4 w-4" />
+                {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
+                <Send className={`${isRTL ? 'mr-2 icon-flip' : 'ml-2'} h-4 w-4`} />
               </Button>
             </form>
           </div>

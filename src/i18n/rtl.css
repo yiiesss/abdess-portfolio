@@ -1,0 +1,56 @@
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Flip certain icons in RTL mode */
+.rtl .icon-flip {
+  transform: scaleX(-1);
+}
+
+/* Adjust margin and padding for RTL */
+.rtl .ml-2,
+.rtl .mx-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .mr-2,
+.rtl .mx-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.rtl .pl-2,
+.rtl .px-2 {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+.rtl .pr-2,
+.rtl .px-2 {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+/* Adjust flex directions for RTL */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Adjust margins for icons in buttons */
+.rtl [class*="lucide-"] {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+/* Adjust text alignment in justified content */
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}

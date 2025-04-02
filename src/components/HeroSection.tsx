@@ -1,8 +1,13 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GitBranch, Code, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+  
   return (
     <section className="min-h-screen pt-20 flex flex-col justify-center relative overflow-hidden">
       {/* Background effect */}
@@ -13,53 +18,53 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
         <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/30 bg-primary/5 text-sm mb-6 animate-float">
-          <span className="text-foreground/70">Welcome to my portfolio</span>
+          <span className="text-foreground/70">{t('hero.welcome')}</span>
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          <span className="text-gradient-primary">Full-Stack Developer</span>
+          <span className="text-gradient-primary">{t('hero.title1')}</span>
           <br />
-          <span>Crafting Digital Solutions</span>
+          <span>{t('hero.title2')}</span>
         </h1>
         
         <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mb-10">
-          Specializing in creating professional applications for healthcare, agriculture, and retail industries. 
-          Turning complex business requirements into elegant, user-friendly solutions.
+          {t('hero.description')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <Button size="lg" className="animated-gradient font-medium">
-            Explore Projects <ArrowRight className="ml-2 h-4 w-4" />
+            {t('hero.exploreProjects')} 
+            <ArrowRight className={`${isRTL ? 'mr-2 icon-flip' : 'ml-2'} h-4 w-4`} />
           </Button>
           <Button variant="outline" size="lg">
-            Contact Me
+            {t('hero.contactMe')}
           </Button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
           <div className="glass-card p-6 rounded-xl text-left">
             <Code className="h-10 w-10 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Clean Code</h3>
-            <p className="text-foreground/70">Maintainable, well-structured solutions that scale with your business</p>
+            <h3 className="text-xl font-semibold mb-2">{t('features.cleanCode.title')}</h3>
+            <p className="text-foreground/70">{t('features.cleanCode.description')}</p>
           </div>
           
           <div className="glass-card p-6 rounded-xl text-left">
             <GitBranch className="h-10 w-10 text-accent mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Modern Stack</h3>
-            <p className="text-foreground/70">Utilizing the latest technologies for robust application development</p>
+            <h3 className="text-xl font-semibold mb-2">{t('features.modernStack.title')}</h3>
+            <p className="text-foreground/70">{t('features.modernStack.description')}</p>
           </div>
           
           <div className="glass-card p-6 rounded-xl text-left">
             <Zap className="h-10 w-10 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Domain Expertise</h3>
-            <p className="text-foreground/70">Specialized knowledge in healthcare, agriculture, and retail sectors</p>
+            <h3 className="text-xl font-semibold mb-2">{t('features.domainExpertise.title')}</h3>
+            <p className="text-foreground/70">{t('features.domainExpertise.description')}</p>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
         <div className="flex flex-col items-center">
-          <span className="text-foreground/50 text-sm mb-2">Scroll to explore</span>
+          <span className="text-foreground/50 text-sm mb-2">{t('hero.scroll')}</span>
           <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center">
             <div className="w-1.5 h-1.5 bg-foreground/50 rounded-full mt-2 animate-bounce"></div>
           </div>
