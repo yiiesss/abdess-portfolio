@@ -1,0 +1,189 @@
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+
+const ContactSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate sending the message
+    setTimeout(() => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      setIsSubmitting(false);
+    }, 1500);
+  };
+
+  return (
+    <section className="py-20 relative" id="contact">
+      {/* Background effect */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full filter blur-[120px] opacity-60"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Get In <span className="text-gradient-primary">Touch</span>
+          </h2>
+          <p className="text-foreground/70">
+            Have a project in mind or want to discuss a potential collaboration? 
+            I'm always open to new opportunities and challenges.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-2 space-y-8">
+            <div className="glass-card p-6 rounded-xl">
+              <div className="flex items-start space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-lg mb-1">Email</h3>
+                  <p className="text-foreground/70">contact@example.com</p>
+                  <a href="mailto:contact@example.com" className="text-primary text-sm hover:underline mt-1 inline-block">
+                    Send an email
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-6 rounded-xl">
+              <div className="flex items-start space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-lg mb-1">Phone</h3>
+                  <p className="text-foreground/70">+1 (555) 123-4567</p>
+                  <a href="tel:+15551234567" className="text-primary text-sm hover:underline mt-1 inline-block">
+                    Call me
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="glass-card p-6 rounded-xl">
+              <div className="flex items-start space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-lg mb-1">Location</h3>
+                  <p className="text-foreground/70">New York, NY</p>
+                  <span className="text-primary text-sm mt-1 inline-block">
+                    Available for remote work
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-3">
+            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Your Name
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="bg-secondary/50 border-secondary"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Your Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="bg-secondary/50 border-secondary"
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  Subject
+                </label>
+                <Input
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="bg-secondary/50 border-secondary"
+                  required
+                />
+              </div>
+              
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="h-32 bg-secondary/50 border-secondary"
+                  required
+                />
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full animated-gradient"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                <Send className="ml-2 h-4 w-4" />
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
