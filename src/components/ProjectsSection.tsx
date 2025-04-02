@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -42,8 +41,8 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="mb-16">
-          <Card className="overflow-hidden glass-card hover:border-primary/50 transition-all duration-300 group">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="overflow-hidden glass-card hover:border-primary/50 transition-all duration-300 group col-span-1 lg:col-span-3 mb-8">
             <div className="p-6">
               <div className="flex gap-2 flex-wrap mb-3">
                 {jewelryProject.tags.map((tag) => (
@@ -56,9 +55,7 @@ const ProjectsSection = () => {
               <p className="text-foreground/70 mb-4">{jewelryProject.description}</p>
             </div>
             
-            {/* Mosaic layout for images */}
             <div className="grid grid-cols-6 grid-rows-2 gap-2 p-6 pt-0 h-[400px]">
-              {/* Main large image */}
               <div className="col-span-4 row-span-2 overflow-hidden rounded-md">
                 <img 
                   src={jewelryProject.images[0]} 
@@ -67,7 +64,6 @@ const ProjectsSection = () => {
                 />
               </div>
               
-              {/* Right side vertical stack - top image */}
               <div className="col-span-2 row-span-1 overflow-hidden rounded-md">
                 <img 
                   src={jewelryProject.images[1]} 
@@ -76,7 +72,6 @@ const ProjectsSection = () => {
                 />
               </div>
               
-              {/* Right side vertical stack - bottom image */}
               <div className="col-span-2 row-span-1 overflow-hidden rounded-md">
                 <img 
                   src={jewelryProject.images[2]} 
@@ -100,9 +95,7 @@ const ProjectsSection = () => {
               </Button>
             </div>
           </Card>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden glass-card hover:border-primary/50 transition-all duration-300 group">
               <div className="h-48 bg-secondary relative overflow-hidden">
@@ -111,7 +104,7 @@ const ProjectsSection = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {false && ( // Placeholder for coming soon logic
+                {false && (
                   <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
                     <span className="text-sm font-medium text-foreground/90 px-3 py-1 rounded-full border border-foreground/20">
                       {t('projects.comingSoon')}
