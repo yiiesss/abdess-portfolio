@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import LanguageSelector from '@/components/LanguageSelector';
 import { useTranslation } from 'react-i18next';
@@ -11,7 +11,6 @@ import { useLanguage } from '@/i18n/LanguageContext';
 const Navbar = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -34,13 +33,6 @@ const Navbar = () => {
     { name: t('navbar.contact'), to: '/contact' }
   ];
 
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === path;
-    }
-    return location.pathname.startsWith(path);
-  };
-
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-card py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -54,9 +46,9 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.to}
-              className={`relative text-sm font-medium ${isActive(link.to) ? 'text-primary' : 'text-foreground/80 hover:text-foreground'} transition-colors
+              className="relative text-sm font-medium text-foreground/80 hover:text-foreground transition-colors
                 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary 
-                after:transition-all hover:after:w-full ${isActive(link.to) ? 'after:w-full' : ''}`}
+                after:transition-all hover:after:w-full"
             >
               {link.name}
             </Link>
@@ -92,7 +84,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.to}
-                className={`${isActive(link.to) ? 'text-primary' : 'text-foreground/90 hover:text-foreground'} py-2 transition-colors`}
+                className="text-foreground/90 hover:text-foreground py-2 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
