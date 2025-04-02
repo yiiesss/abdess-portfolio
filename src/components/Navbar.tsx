@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,17 +50,23 @@ const Navbar = () => {
           ))}
         </nav>
         
-        <Button variant="ghost" className="hidden md:flex items-center gap-2 border border-primary/20 hover:bg-primary/10">
-          <span>Resume</span>
-        </Button>
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
+          <Button variant="ghost" className="items-center gap-2 border border-primary/20 hover:bg-primary/10">
+            <span>Resume</span>
+          </Button>
+        </div>
         
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            className="text-foreground"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
       
       {/* Mobile Menu */}

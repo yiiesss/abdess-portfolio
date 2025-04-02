@@ -2,43 +2,43 @@
 import { Card } from "@/components/ui/card";
 import { 
   Code, 
-  Database, 
-  LineChart, 
-  Gem, 
+  CheckCircle, 
+  Target, 
+  Sparkles, 
   ShieldCheck, 
-  Smartphone 
+  Rocket 
 } from "lucide-react";
 
 const skills = [
   {
     icon: <Code className="w-6 h-6 text-primary" />,
-    title: "Frontend Development",
-    description: "React, Vue, Angular, Responsive Design, UI/UX Implementation"
+    title: "Full-Stack Development",
+    description: "Comprehensive solutions spanning frontend, backend, and database technologies"
   },
   {
-    icon: <Database className="w-6 h-6 text-primary" />,
-    title: "Backend Development",
-    description: "Node.js, Python, SQL/NoSQL Databases, API Design"
+    icon: <CheckCircle className="w-6 h-6 text-primary" />,
+    title: "Quality Assurance",
+    description: "Rigorous testing methodologies ensuring bug-free, reliable applications"
   },
   {
-    icon: <LineChart className="w-6 h-6 text-primary" />,
-    title: "Data Analytics",
-    description: "Business Intelligence, Reporting, Data Visualization"
+    icon: <Target className="w-6 h-6 text-primary" />,
+    title: "Client-Focused Approach",
+    description: "Solutions tailored to your specific business requirements and goals"
   },
   {
-    icon: <Gem className="w-6 h-6 text-primary" />,
-    title: "Industry Expertise",
-    description: "Healthcare, Agriculture, Retail, Business Operations"
+    icon: <Sparkles className="w-6 h-6 text-primary" />,
+    title: "Innovative Solutions",
+    description: "Leveraging cutting-edge technologies to deliver modern, efficient applications"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-primary" />,
-    title: "Security & Compliance",
-    description: "HIPAA, Data Protection, Secure Coding Practices"
+    title: "Security & Performance",
+    description: "Applications built with security best practices and optimized for performance"
   },
   {
-    icon: <Smartphone className="w-6 h-6 text-primary" />,
-    title: "Mobile Development",
-    description: "React Native, Progressive Web Apps, Mobile UI Design"
+    icon: <Rocket className="w-6 h-6 text-primary" />,
+    title: "End-to-End Delivery",
+    description: "Complete project management from concept to deployment and maintenance"
   }
 ];
 
@@ -57,13 +57,13 @@ const AboutSection = () => {
               About <span className="text-gradient-primary">Me</span>
             </h2>
             <p className="text-foreground/80 mb-4">
-              I'm a seasoned full-stack developer specializing in creating domain-specific applications that solve real business challenges. With expertise across healthcare, agriculture, and retail sectors, I build solutions that streamline operations and enhance productivity.
+              I specialize in creating turnkey solutions that perfectly align with clients' business objectives. My focus is on delivering complete, high-quality applications that work flawlessly from day one.
             </p>
             <p className="text-foreground/80 mb-4">
-              My approach combines technical excellence with deep industry knowledge, allowing me to understand the unique requirements of each sector. I pride myself on delivering clean, maintainable code that scales with your business needs.
+              With a commitment to understanding your unique requirements, I build custom software that solves real business challenges while maintaining exceptional code quality and user experience.
             </p>
             <p className="text-foreground/80 mb-6">
-              When I'm not coding, I'm continuously learning about new technologies and industry trends to ensure my solutions remain cutting-edge and forward-thinking.
+              My approach combines technical excellence with a strong emphasis on reliability and performance, ensuring that every solution I deliver is robust, scalable, and truly bug-free.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -80,8 +80,8 @@ const AboutSection = () => {
                 <span className="text-sm text-foreground/70">Clients</span>
               </div>
               <div className="text-center">
-                <span className="block text-3xl font-bold text-gradient-primary">3</span>
-                <span className="text-sm text-foreground/70">Industries</span>
+                <span className="block text-3xl font-bold text-gradient-primary">100%</span>
+                <span className="text-sm text-foreground/70">Satisfaction</span>
               </div>
             </div>
           </div>
