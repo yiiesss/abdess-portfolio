@@ -20,27 +20,32 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     i18n.changeLanguage(lang);
     setCurrentLanguage(lang);
     setIsRTL(lang === 'ar');
-    localStorage.setItem('i18nextLng', lang);
     
-    // Update document direction
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    
-    // Add or remove RTL class on body
-    if (lang === 'ar') {
-      document.body.classList.add('rtl');
-    } else {
-      document.body.classList.remove('rtl');
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('i18nextLng', lang);
+      
+      // Update document direction
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      
+      // Add or remove RTL class on body
+      if (lang === 'ar') {
+        document.body.classList.add('rtl');
+      } else {
+        document.body.classList.remove('rtl');
+      }
     }
   };
 
   useEffect(() => {
     // Initialize RTL setting based on saved language
-    const savedLanguage = localStorage.getItem('i18nextLng')?.split('-')[0] || 'en';
-    setIsRTL(savedLanguage === 'ar');
-    document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
-    
-    if (savedLanguage === 'ar') {
-      document.body.classList.add('rtl');
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('i18nextLng')?.split('-')[0] || 'en';
+      setIsRTL(savedLanguage === 'ar');
+      document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
+      
+      if (savedLanguage === 'ar') {
+        document.body.classList.add('rtl');
+      }
     }
   }, []);
 
