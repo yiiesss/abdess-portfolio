@@ -35,3 +35,5 @@ jobs:
       with:
         github_token: ${{ secrets.GH_PAGES_TOKEN }}
         publish_dir: ./dist
+    - name: Debug GH_PAGES_TOKEN
+      run: echo "Token exists: ${{ secrets.GH_PAGES_TOKEN != '' }}"
