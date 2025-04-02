@@ -36,4 +36,9 @@ jobs:
         github_token: ${{ secrets.GH_PAGES_TOKEN }}
         publish_dir: ./dist
     - name: Debug GH_PAGES_TOKEN
-      run: echo "Token exists: ${{ secrets.GH_PAGES_TOKEN != '' }}"
+      run: |
+        if [ -z "${{ secrets.GH_PAGES_TOKEN }}" ]; then
+          echo "Token does not exist"
+        else
+          echo "Token exists"
+        fi
