@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link to="/" className="text-xl font-bold text-gradient-primary mb-4 inline-block">
-              DevPortfolio
+              Abdess's Portfolio
             </Link>
             <p className="text-foreground/70 mb-6 max-w-md">
               {t('footer.description')}
@@ -87,7 +87,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/50 text-sm">
-            © {currentYear} DevPortfolio. {t('footer.rights')}
+            © {currentYear} Abdess's Portfolio. {t('footer.rights')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-foreground/50 hover:text-foreground/80 transition-colors">

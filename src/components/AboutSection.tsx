@@ -73,15 +73,15 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="text-center">
-                <span className="block text-3xl font-bold text-gradient-primary">5+</span>
+                <span className="block text-3xl font-bold text-gradient-primary">18+</span>
                 <span className="text-sm text-foreground/70">{t('about.stats.experience')}</span>
               </div>
               <div className="text-center">
-                <span className="block text-3xl font-bold text-gradient-primary">20+</span>
+                <span className="block text-3xl font-bold text-gradient-primary">10+</span>
                 <span className="text-sm text-foreground/70">{t('about.stats.projects')}</span>
               </div>
               <div className="text-center">
-                <span className="block text-3xl font-bold text-gradient-primary">15+</span>
+                <span className="block text-3xl font-bold text-gradient-primary">10+</span>
                 <span className="text-sm text-foreground/70">{t('about.stats.clients')}</span>
               </div>
               <div className="text-center">

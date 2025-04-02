@@ -9,9 +9,9 @@
   },
   "hero": {
     "welcome": "Bienvenido a mi portafolio",
-    "title1": "Desarrollador Full-Stack",
+    "title1": "Desarrollo Full-Stack",
     "title2": "Creando Soluciones Digitales",
-    "description": "Especializado en crear aplicaciones profesionales para sectores de salud, agricultura y comercio minorista. Transformando requisitos complejos en soluciones elegantes y fáciles de usar.",
+    "description": "Especializado en crear aplicaciones profesionales para diferentes sectores. Transformando requisitos complejos en soluciones elegantes y fáciles de usar.",
     "exploreProjects": "Explorar Proyectos",
     "contactMe": "Contáctame",
     "scroll": "Desplázate para explorar"
@@ -39,18 +39,18 @@
     "projects": [
       {
         "title": "Sistema de Gestión de Gabinete Médico",
-        "description": "Una solución integral para hospitales y clínicas para gestionar medicamentos, equipos y suministros con seguimiento en tiempo real y análisis.",
-        "tags": ["Salud", "Inventario", "Análisis"]
+        "description": "Una solución integral para clínicas para gestionar el horario diario, los archivos médicos, los costos vs ingresos, y el inventario con seguimiento en tiempo real y análisis.",
+        "tags": ["Salud", "Agenda", "Análisis","Tablero"]
       },
       {
         "title": "Sistema de Gestión Avícola",
-        "description": "Plataforma integral para granjas avícolas para rastrear el consumo de alimento, métricas de salud y rendimientos de producción con análisis predictivo.",
-        "tags": ["Agricultura", "IoT", "Tablero"]
+        "description": "Plataforma integral para granjas avícolas para rastrear los costos, el inventario, la producción y la gestión de la granja con análisis predictivos.",
+        "tags": ["Agricultura", "Inventario","Finanzas", "Tablero"]
       },
       {
         "title": "Inventario y CRM para Joyería",
         "description": "Solución integrada para minoristas de joyería para gestionar inventario, relaciones con clientes y ventas a través de una interfaz intuitiva.",
-        "tags": ["Comercio", "CRM", "E-commerce"]
+        "tags": ["Comercio", "CRM", "gestión de inventario"]
       }
     ]
   },
@@ -121,7 +121,7 @@
     "successDescription": "Gracias por tu mensaje. Me pondré en contacto contigo pronto."
   },
   "footer": {
-    "description": "Especializado en crear aplicaciones empresariales para sectores de salud, agricultura y comercio minorista, transformando requisitos complejos en soluciones elegantes.",
+    "description": "Especializado en crear aplicaciones de negocios para diferentes industrias, transformando requisitos complejos en soluciones elegantes.",
     "quickLinks": "Enlaces Rápidos",
     "services": "Servicios",
     "servicesList": {

@@ -74,8 +74,8 @@ const ContactSection = () => {
                 </div>
                 <div className={isRTL ? 'text-right mr-4' : ''}>
                   <h3 className="font-medium text-lg mb-1">{t('contact.email.title')}</h3>
-                  <p className="text-foreground/70">contact@example.com</p>
-                  <a href="mailto:contact@example.com" className="text-primary text-sm hover:underline mt-1 inline-block">
+                  <p className="text-foreground/70">linasio.com@gmail.com</p>
+                  <a href="mailto:linasio.com@gmail.com" className="text-primary text-sm hover:underline mt-1 inline-block">
                     {t('contact.email.action')}
                   </a>
                 </div>
@@ -89,8 +89,8 @@ const ContactSection = () => {
                 </div>
                 <div className={isRTL ? 'text-right mr-4' : ''}>
                   <h3 className="font-medium text-lg mb-1">{t('contact.phone.title')}</h3>
-                  <p className="text-foreground/70">+1 (555) 123-4567</p>
-                  <a href="tel:+15551234567" className="text-primary text-sm hover:underline mt-1 inline-block">
+                  <p className="text-foreground/70">+212 661 141 101</p>
+                  <a href="tel:+212661141101" className="text-primary text-sm hover:underline mt-1 inline-block">
                     {t('contact.phone.action')}
                   </a>
                 </div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 </div>
                 <div className={isRTL ? 'text-right mr-4' : ''}>
                   <h3 className="font-medium text-lg mb-1">{t('contact.location.title')}</h3>
-                  <p className="text-foreground/70">New York, NY</p>
+                  <p className="text-foreground/70">Casablanca, Morocco</p>
                   <span className="text-primary text-sm mt-1 inline-block">
                     {t('contact.location.remote')}
                   </span>

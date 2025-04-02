@@ -9,9 +9,9 @@
   },
   "hero": {
     "welcome": "Bienvenue sur mon portfolio",
-    "title1": "Développeur Full-Stack",
+    "title1": "Développement Full-Stack",
     "title2": "Création de Solutions Numériques",
-    "description": "Spécialisé dans la création d'applications professionnelles pour les secteurs de la santé, de l'agriculture et du commerce de détail. Transformation d'exigences complexes en solutions élégantes et conviviales.",
+    "description": "Spécialisé dans la création d'applications professionnelles pour différents secteurs. Transformation d'exigences complexes en solutions élégantes et conviviales.",
     "exploreProjects": "Explorer les Projets",
     "contactMe": "Me Contacter",
     "scroll": "Faites défiler pour explorer"
@@ -39,18 +39,18 @@
     "projects": [
       {
         "title": "Système de Gestion de Cabinet Médical",
-        "description": "Une solution complète pour les hôpitaux et les cliniques pour gérer les médicaments, l'équipement et les fournitures avec suivi en temps réel et analyses.",
-        "tags": ["Santé", "Inventaire", "Analyses"]
+        "description": "Une solution complète pour les cliniques pour gérer le planning quotidien, les dossiers médicaux, les coûts vs recettes, et l'inventaire avec suivi en temps réel et analyses.",
+        "tags": ["Santé", "Agenda", "Analyse","Tableau de bord"]
       },
       {
         "title": "Système de Gestion Avicole",
-        "description": "Plateforme de bout en bout pour les fermes avicoles pour suivre la consommation d'aliments, les métriques de santé et les rendements de production avec analyses prédictives.",
-        "tags": ["Agriculture", "IoT", "Tableau de bord"]
+        "description": "Plateforme complète pour les fermes avicoles pour suivre les coûts, l'inventaire, la production et la gestion de la ferme avec des analyses prédictives.",
+        "tags": ["Agriculture", "Gestion de stock","Finance", "Tableau de bord"]
       },
       {
         "title": "Inventaire et CRM pour Bijouterie",
         "description": "Solution intégrée pour les détaillants de bijoux pour gérer l'inventaire, les relations clients et les ventes via une interface intuitive.",
-        "tags": ["Commerce", "CRM", "E-commerce"]
+        "tags": ["Commerce", "CRM", "Gestion de stock"]
       }
     ]
   },
@@ -121,7 +121,7 @@
     "successDescription": "Merci pour votre message. Je vous répondrai bientôt."
   },
   "footer": {
-    "description": "Spécialisé dans la création d'applications d'entreprise pour les secteurs de la santé, de l'agriculture et du commerce de détail, transformant des exigences complexes en solutions élégantes.",
+    "description": "Spécialisé dans la création d'applications d'entreprise pour différents secteurs, transformant des exigences complexes en solutions élégantes.",
     "quickLinks": "Liens Rapides",
     "services": "Services",
     "servicesList": {

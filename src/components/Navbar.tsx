@@ -37,7 +37,7 @@ const Navbar = () => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-card py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gradient-primary">DevPortfolio</span>
+          <span className="text-xl font-bold text-gradient-primary">Abdess's Portfolio</span>
         </Link>
         
         {/* Desktop Navigation */}

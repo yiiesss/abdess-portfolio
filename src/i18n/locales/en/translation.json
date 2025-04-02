@@ -9,9 +9,9 @@
   },
   "hero": {
     "welcome": "Welcome to my portfolio",
-    "title1": "Full-Stack Developer",
+    "title1": "Full-Stack Development",
     "title2": "Crafting Digital Solutions",
-    "description": "Specializing in creating professional applications for healthcare, agriculture, and retail industries. Turning complex business requirements into elegant, user-friendly solutions.",
+    "description": "Specializing in creating professional applications for different industries. Turning complex business requirements into elegant, user-friendly solutions.",
     "exploreProjects": "Explore Projects",
     "contactMe": "Contact Me",
     "scroll": "Scroll to explore"
@@ -39,18 +39,18 @@
     "projects": [
       {
         "title": "Medical Cabinet Management System",
-        "description": "A comprehensive solution for hospitals and clinics to manage medications, equipment, and supplies with real-time tracking and analytics.",
-        "tags": ["Healthcare", "Inventory", "Analytics"]
+        "description": "A comprehensive solution for clinics to manage the daily agenda, the medical records, the expenses vs  income, and the inventory with real-time tracking and analytics.",
+        "tags": ["Healthcare", "Agenda", "Analytics","Dashboard"]
       },
       {
         "title": "Poultry Management System",
-        "description": "End-to-end platform for poultry farms to track feed consumption, health metrics, and production yields with predictive analytics.",
-        "tags": ["Agriculture", "IoT", "Dashboard"]
+        "description": "End-to-end platform for poultry farms to track finance,inventory , production and farm management with predictive analytics.",
+        "tags": ["Agriculture", "Inventory","Finance", "Dashboard"]
       },
       {
         "title": "Jewelry Shop Inventory & CRM",
         "description": "Integrated solution for jewelry retailers to manage inventory, customer relationships, and sales through an intuitive interface.",
-        "tags": ["Retail", "CRM", "E-commerce"]
+        "tags": ["Retail", "CRM", "Inventory Management"]
       }
     ]
   },
@@ -121,7 +121,7 @@
     "successDescription": "Thank you for your message. I'll get back to you soon."
   },
   "footer": {
-    "description": "Specialized in creating business applications for healthcare, agriculture, and retail industries, transforming complex requirements into elegant solutions.",
+    "description": "Specialized in creating business applications for different industries, transforming complex requirements into elegant solutions.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "servicesList": {
