@@ -1,7 +1,8 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Images } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "react-router-dom";
@@ -55,18 +56,34 @@ const ProjectsSection = () => {
               <p className="text-foreground/70 mb-4">{jewelryProject.description}</p>
             </div>
             
-            <div className="grid grid-cols-2 gap-2 p-6 pt-0">
-              {jewelryProject.images.map((image, index) => (
-                <div key={index} className={`overflow-hidden rounded-md ${index === 0 ? 'col-span-2' : 'col-span-1'}`}>
-                  <AspectRatio ratio={index === 0 ? 16/9 : 4/3}>
-                    <img 
-                      src={image} 
-                      alt={`Jewelry CRM Screenshot ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </AspectRatio>
-                </div>
-              ))}
+            {/* Mosaic layout for images */}
+            <div className="grid grid-cols-6 grid-rows-2 gap-2 p-6 pt-0 h-[400px]">
+              {/* Main large image */}
+              <div className="col-span-4 row-span-2 overflow-hidden rounded-md">
+                <img 
+                  src={jewelryProject.images[0]} 
+                  alt="Jewelry CRM Main Dashboard"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              
+              {/* Right side vertical stack - top image */}
+              <div className="col-span-2 row-span-1 overflow-hidden rounded-md">
+                <img 
+                  src={jewelryProject.images[1]} 
+                  alt="Jewelry CRM Sales Analysis"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              
+              {/* Right side vertical stack - bottom image */}
+              <div className="col-span-2 row-span-1 overflow-hidden rounded-md">
+                <img 
+                  src={jewelryProject.images[2]} 
+                  alt="Jewelry CRM Inventory"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
             </div>
             
             <div className="p-6 pt-2 flex justify-end">
