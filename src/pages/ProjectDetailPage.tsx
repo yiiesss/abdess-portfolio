@@ -56,7 +56,7 @@ const ProjectDetailPage = () => {
     ]
   ];
   
-  // Project screenshot images and descriptions
+  // Project screenshot images and descriptions - properly organized by project names
   const projectScreenshots = [
     // Medical Cabinet
     [
