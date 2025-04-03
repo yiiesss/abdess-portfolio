@@ -10,7 +10,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
-import JewelryProjectPage from "./pages/JewelryProjectPage";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { LanguageProvider } from "./i18n/LanguageContext";
 
@@ -33,7 +32,6 @@ const App = () => (
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/project/jewelry" element={<JewelryProjectPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
