@@ -3,11 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Badge } from "@/components/ui/badge";
+import BackToProjectsButton from "@/components/project/BackToProjectsButton";
+import ProjectHeader from "@/components/project/ProjectHeader";
+import TechStack from "@/components/project/TechStack";
+import MainProjectImage from "@/components/project/MainProjectImage";
+import ProjectScreenshots from "@/components/project/ProjectScreenshots";
 
 const ProjectDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -133,71 +133,22 @@ const ProjectDetailPage = () => {
       <Navbar />
       <div className="pt-24 pb-12">
         <div className="container mx-auto px-4">
-          <Button 
-            variant="ghost" 
-            className="mb-6 flex items-center gap-2"
-            onClick={() => navigate(-1)}
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Projects
-          </Button>
+          <BackToProjectsButton />
           
-          <h1 className="text-4xl font-bold mb-4">
-            {project.title}
-          </h1>
+          <ProjectHeader 
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+          />
           
-          <div className="flex gap-2 flex-wrap mb-6">
-            {project.tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-secondary/50">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+          <MainProjectImage 
+            imageUrl={projectThumbnails[projectIndex]} 
+            altText={project.title}
+          />
           
-          <p className="text-foreground/70 max-w-3xl mb-12">
-            {project.description}
-          </p>
+          <TechStack techItems={techStacks[projectIndex]} />
           
-          {/* Main project image */}
-          <Card className="overflow-hidden mb-12">
-            <AspectRatio ratio={16/9}>
-              <img 
-                src={projectThumbnails[projectIndex]} 
-                alt={project.title} 
-                className="w-full h-full object-cover" 
-              />
-            </AspectRatio>
-          </Card>
-          
-          {/* Tech Stack Section */}
-          <h2 className="text-2xl font-semibold mb-6">Technologies Used</h2>
-          
-          <div className="flex flex-wrap gap-6 mb-12">
-            {techStacks[projectIndex].map((tech, index) => (
-              <div key={index} className="flex items-center gap-2 bg-secondary/20 px-4 py-2 rounded-full">
-                <span className="font-medium text-sm">{tech.name}</span>
-              </div>
-            ))}
-          </div>
-          
-          <h2 className="text-2xl font-semibold mb-6">Screenshots & Features</h2>
-          
-          <div className="grid grid-cols-1 gap-8 mb-16">
-            {projectScreenshots[projectIndex].map((screenshot, index) => (
-              <Card key={index} className="overflow-hidden">
-                <AspectRatio ratio={16/9}>
-                  <img 
-                    src={screenshot.img} 
-                    alt={`Screenshot ${index + 1}`} 
-                    className="w-full h-full object-cover" 
-                  />
-                </AspectRatio>
-                <CardContent className="p-6">
-                  <p className="text-foreground/80">{screenshot.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <ProjectScreenshots screenshots={projectScreenshots[projectIndex]} />
         </div>
       </div>
       <Footer />
