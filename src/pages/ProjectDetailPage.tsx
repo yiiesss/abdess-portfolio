@@ -115,11 +115,11 @@ const ProjectDetailPage = () => {
     // Medical Cabinet
     [
       {
-        img: "./lovable-uploads/cabinet-financial-overview.png",
+        img: "lovable-uploads/cabinet-financial-overview.png",
         description: t('projectDetail.cabinet.financialOverview')
       },
       {
-        img: "./lovable-uploads/cabinet-expenses-tracker.png",
+        img: "/lovable-uploads/cabinet-expenses-tracker.png",
         description: t('projectDetail.cabinet.expensesTracker')
       },
       {
