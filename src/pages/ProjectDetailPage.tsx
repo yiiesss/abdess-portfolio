@@ -115,72 +115,72 @@ const ProjectDetailPage = () => {
     // Medical Cabinet
     [
       {
-        img: "{import.meta.env.VITE_BASENAME || undefined}/lovable-uploads/cabinet-financial-overview.png",
+        img: "../lovable-uploads/cabinet-financial-overview.png",
         description: t('projectDetail.cabinet.financialOverview')
       },
       {
-        img: "/lovable-uploads/cabinet-expenses-tracker.png",
+        img: "../lovable-uploads/cabinet-expenses-tracker.png",
         description: t('projectDetail.cabinet.expensesTracker')
       },
       {
-        img: "./lovable-uploads/cabinet-daily-appointments.png",
+        img: "../lovable-uploads/cabinet-daily-appointments.png",
         description: t('projectDetail.cabinet.dailyAppointments')
       },
       {
-        img: "./lovable-uploads/cabinet-document-editor.png",
+        img: "../lovable-uploads/cabinet-document-editor.png",
         description: t('projectDetail.cabinet.documentEditor')
       }
     ],
     // Poultry Management
     [
       {
-        img: "./lovable-uploads/poultry-supplier-detail.png",
+        img: "../lovable-uploads/poultry-supplier-detail.png",
         description: t('projectDetail.poultry.supplierDetail')
       },
       {
-        img: "./lovable-uploads/poultry-financial-timeline.png",
+        img: "../lovable-uploads/poultry-financial-timeline.png",
         description: t('projectDetail.poultry.financialTimeline')
       },
       {
-        img: "./lovable-uploads/poultry-transaction-listing.png",
+        img: "../lovable-uploads/poultry-transaction-listing.png",
         description: t('projectDetail.poultry.transactionListing')
       },
       {
-        img: "./lovable-uploads/poultry-risk-distribution.png",
+        img: "../lovable-uploads/poultry-risk-distribution.png",
         description: t('projectDetail.poultry.riskDistribution')
       },
       {
-        img: "./lovable-uploads/poultry-inventory-utilization.png",
+        img: "../lovable-uploads/poultry-inventory-utilization.png",
         description: t('projectDetail.poultry.inventoryUtilization')
       }
     ],
     // Jewelry Shop
     [
       {
-        img: "./lovable-uploads/jewelry-category-summary.png",
+        img: "../lovable-uploads/jewelry-category-summary.png",
         description: t('projectDetail.jewelry.categorySummary')
       },
       {
-        img: "./lovable-uploads/jewelry-dashboard-overview.png",
+        img: "../lovable-uploads/jewelry-dashboard-overview.png",
         description: t('projectDetail.jewelry.dashboardOverview')
       },
       {
-        img: "./lovable-uploads/jewelry-sales-analysis.png",
+        img: "../lovable-uploads/jewelry-sales-analysis.png",
         description: t('projectDetail.jewelry.salesAnalysis')
       },
       {
-        img: "./lovable-uploads/jewelry-inventory-valuation.png",
+        img: "../lovable-uploads/jewelry-inventory-valuation.png",
         description: t('projectDetail.jewelry.inventoryValuation')
       }
     ]
   ];
 
   // Project thumbnail images (same as in ProjectsSection)
-  const projectThumbnails = [
-    "./lovable-uploads/cabinet-thumb.png", // Medical Cabinet
-    "./lovable-uploads/poultry-thumb.png", // Poultry Management
-    "./lovable-uploads/jewelry-thumb.png", // Jewelry Shop
-  ];
+  // const projectThumbnails = [
+  //   "../lovable-uploads/cabinet-thumb.png", // Medical Cabinet
+  //   "../lovable-uploads/poultry-thumb.png", // Poultry Management
+  //   "../lovable-uploads/jewelry-thumb.png", // Jewelry Shop
+  // ];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
