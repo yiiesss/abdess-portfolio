@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yiiesss.github.io/abdess-portfolio.",
+  "homepage": "https://yiiesss.github.io/linasio-portfolio.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
