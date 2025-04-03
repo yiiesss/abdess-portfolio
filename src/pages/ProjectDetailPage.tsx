@@ -115,7 +115,7 @@ const ProjectDetailPage = () => {
     // Medical Cabinet
     [
       {
-        img: "lovable-uploads/cabinet-financial-overview.png",
+        img: "{import.meta.env.VITE_BASENAME || undefined}/lovable-uploads/cabinet-financial-overview.png",
         description: t('projectDetail.cabinet.financialOverview')
       },
       {
