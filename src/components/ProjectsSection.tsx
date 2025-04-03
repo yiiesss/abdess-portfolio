@@ -20,9 +20,9 @@ const ProjectsSection = () => {
 
   // Project thumbnail images
   const projectImages = [
-    "/lovable-uploads/cabinet-thumb.png", // Medical Cabinet
-    "/lovable-uploads/poultry-thumb.png", // Poultry Management
-    "/lovable-uploads/jewelry-thumb.png", // Jewelry Shop
+    "./lovable-uploads/cabinet-thumb.png", // Medical Cabinet
+    "./lovable-uploads/poultry-thumb.png", // Poultry Management
+    "./lovable-uploads/jewelry-thumb.png", // Jewelry Shop
   ];
 
   return (
