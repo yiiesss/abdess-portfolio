@@ -20,9 +20,9 @@ const ProjectsSection = () => {
 
   // Project thumbnail images
   const projectImages = [
-    "/lovable-uploads/79970cd7-29c4-4c1c-8592-4cbf0c864572.png", // Medical Cabinet
-    "/lovable-uploads/820a8a3c-6704-45ab-ab2f-d293a8931031.png", // Poultry Management
-    "/lovable-uploads/6b7d5c59-5241-4d1c-8a20-3d595bcf0da2.png", // Jewelry Shop
+    "/lovable-uploads/cabinet-thumb.png", // Medical Cabinet
+    "/lovable-uploads/poultry-thumb.png", // Poultry Management
+    "/lovable-uploads/jewelry-thumb.png", // Jewelry Shop
   ];
 
   return (

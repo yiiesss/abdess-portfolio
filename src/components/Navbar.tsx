@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import LanguageSelector from '@/components/LanguageSelector';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +12,7 @@ const Navbar = () => {
   const { isRTL } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,21 +27,35 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: t('navbar.home'), to: '/' },
     { name: t('navbar.projects'), to: '/projects' },
     { name: t('navbar.about'), to: '/about' },
     { name: t('navbar.contact'), to: '/contact' }
   ];
 
+  const handleHomeClick = () => {
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-card py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gradient-primary">Abdess's Portfolio</span>
+          <span className="text-xl font-bold text-gradient-primary">Linasio Portfolio</span>
         </Link>
         
         {/* Desktop Navigation */}
+        
         <nav className="hidden md:flex items-center gap-8">
+        <Link to="/" onClick={(e) => {
+                  e.preventDefault();
+                  handleHomeClick();
+                }} className="relative text-sm font-medium text-foreground/80 hover:text-foreground transition-colors
+                after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary 
+                after:transition-all hover:after:w-full"
+            >
+              {t('navbar.home')}
+            </Link>
           {navLinks.map((link) => (
             <Link
               key={link.name}

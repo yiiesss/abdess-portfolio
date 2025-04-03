@@ -1,13 +1,37 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChartBarIncreasingIcon, ChartBarStackedIcon, GlobeIcon, PanelTopIcon, SunIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
+import {
+  SiReact,
+  SiTypescript,
+  SiVite,
+  SiTailwindcss,
+  SiRadixui,
+  SiFramer,
+  SiLucide,
+  SiShadcnui,
+  SiReacthookform,
+  SiZod,
+  SiReactrouter,
+  SiSupabase,
+  SiDatefns,
+  SiMui,
+  SiFastify,
+  SiEslint,
+  SiPrettier,
+  SiElectron,
+  SiElectronbuilder,
+  SiTestinglibrary,
+  SiJest,
+  SiSqlite,
+  SiAdobeacrobatreader
+} from "react-icons/si";
 
 const ProjectDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,7 +42,7 @@ const ProjectDetailPage = () => {
   const projects = t('projects.projects', { returnObjects: true }) as {
     title: string;
     description: string;
-    tags: string[];
+    tags: string[]; 
   }[];
   
   const projectIndex = parseInt(id || '1') - 1;
@@ -28,32 +52,62 @@ const ProjectDetailPage = () => {
     return navigate('/projects');
   }
 
-  // Define tech stacks for each project
+  // Define tech stacks for each project    
   const techStacks = [
-    // Medical Cabinet
+    // Medical Cabinet (from cabinet.txt)
     [
-      { name: "React", icon: "react" },
-      { name: "Node.js", icon: "nodejs" },
-      { name: "Express", icon: "javascript" },
-      { name: "MongoDB", icon: "mongodb" },
-      { name: "Tailwind CSS", icon: "css" }
+      { name: "React", icon: <SiReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "Supabase", icon: <SiSupabase /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Radix UI", icon: <SiRadixui /> },
+      { name: "Framer Motion", icon: <SiFramer /> },
+      { name: "Lucide React", icon: <SiLucide /> },
+      { name: "Shadcn", icon: <SiShadcnui /> },
+      { name: "Recharts", icon: <ChartBarStackedIcon /> },
+      { name: "Zod", icon: <SiZod /> },
+      { name: "React Router", icon: <SiReactrouter /> },
+      { name: "PDF", icon: <SiAdobeacrobatreader /> },
+      { name: "i18next", icon: <GlobeIcon /> },
+      { name: "date-fns", icon: <SiDatefns /> },
+      { name: "SunEditor", icon: <SunIcon /> },
+      { name: "React Resizable Panels", icon: <PanelTopIcon /> },
     ],
-    // Poultry Management
+    // Poultry Management (from poultry.txt)
     [
-      { name: "Vue.js", icon: "javascript" },
-      { name: "Express", icon: "nodejs" },
-      { name: "MySQL", icon: "mysql" },
-      { name: "Chart.js", icon: "javascript" },
-      { name: "Bootstrap", icon: "css" }
+      { name: "React", icon: <SiReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "React Router", icon: <SiReactrouter /> },
+      { name: "Material UI", icon: <SiMui /> },
+      { name: "date-fns", icon: <SiDatefns /> },
+      { name: "Fastify", icon: <SiFastify /> },
+      { name: "i18next", icon: <GlobeIcon /> },
+      { name: "ESLint", icon: <SiEslint /> },
+      { name: "Prettier", icon: <SiPrettier /> },
+      { name: "ESLint", icon:  <SiEslint /> },
+      { name: "Recharts",  icon:<ChartBarStackedIcon />},
+      { name: "Zustand", icon: "" },
+     ],
+    // Jewelry Shop (from jewelry.txt)
+    [
+      { name: "React", icon: <SiReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "Electron", icon: <SiElectron /> },
+      { name: "Material UI", icon: <SiMui /> },
+      { name: "Recharts", icon: <ChartBarStackedIcon /> },
+      { name: "Zustand", icon: "" },
+      { name: "React Router v6", icon: <SiReactrouter /> },
+      { name: "SQLite", icon: <SiSqlite /> },
+      { name: "i18next", icon: <GlobeIcon /> },
+      { name: "Electron Builder", icon:  <SiElectronbuilder /> },
+      { name: "Jest", icon: <SiJest /> },
+      { name: "React Testing Library", icon: <SiTestinglibrary /> },
+      { name: "ESLint", icon: <SiEslint /> },
+      { name: "Prettier", icon:  <SiPrettier /> },
     ],
-    // Jewelry Shop
-    [
-      { name: "React", icon: "react" },
-      { name: "Firebase", icon: "firebase" },
-      { name: "Material UI", icon: "css" },
-      { name: "JavaScript", icon: "javascript" },
-      { name: "Node.js", icon: "nodejs" }
-    ]
   ];
   
   // Project screenshot images and descriptions
@@ -61,71 +115,71 @@ const ProjectDetailPage = () => {
     // Medical Cabinet
     [
       {
-        img: "/lovable-uploads/17cfa2b2-86f3-4cf4-b282-365e8fcd46bb.png",
-        description: "Financial overview dashboard showing income vs expenses with detailed revenue breakdowns by payment method"
+        img: "/lovable-uploads/cabinet-financial-overview.png",
+        description: t('projectDetail.cabinet.financialOverview')
       },
       {
-        img: "/lovable-uploads/095fd0a1-5fb0-43e7-ab20-39cf67e9aeaf.png",
-        description: "Expenses tracker with categorized spending, visualized with an interactive pie chart for easy analysis"
+        img: "/lovable-uploads/cabinet-expenses-tracker.png",
+        description: t('projectDetail.cabinet.expensesTracker')
       },
       {
-        img: "/lovable-uploads/cb986a60-aede-41fe-9ec0-67a6a463eb41.png",
-        description: "Daily appointment scheduler with patient records and payment status tracking"
+        img: "/lovable-uploads/cabinet-daily-appointments.png",
+        description: t('projectDetail.cabinet.dailyAppointments')
       },
       {
-        img: "/lovable-uploads/4472ab42-8cfa-416a-a038-6b8f1f0cdd42.png",
-        description: "Document template editor for creating prescriptions and medical reports with patient variable insertion"
+        img: "/lovable-uploads/cabinet-document-editor.png",
+        description: t('projectDetail.cabinet.documentEditor')
       }
     ],
     // Poultry Management
     [
       {
-        img: "/lovable-uploads/f4c02b4b-d6a3-4ff0-bd25-83768cbbc027.png",
-        description: "Supplier detail view showing balance, transactions, and financial analytics with risk threshold monitoring"
+        img: "/lovable-uploads/poultry-supplier-detail.png",
+        description: t('projectDetail.poultry.supplierDetail')
       },
       {
-        img: "/lovable-uploads/7977e095-6768-4dbc-8f1d-2703eefb2fe0.png",
-        description: "Financial timeline and transaction history with multi-category visualization for trend analysis"
+        img: "/lovable-uploads/poultry-financial-timeline.png",
+        description: t('projectDetail.poultry.financialTimeline')
       },
       {
-        img: "/lovable-uploads/1b884259-ec09-4ec6-83ff-3fb9f8bc3190.png",
-        description: "Transaction listing with detailed payment history and action controls for supplier management"
+        img: "/lovable-uploads/poultry-transaction-listing.png",
+        description: t('projectDetail.poultry.transactionListing')
       },
       {
-        img: "/lovable-uploads/5037c9fa-4e47-464f-9f2e-8108ec1e0398.png",
-        description: "Administrative dashboard with risk distribution analysis and critical status monitoring"
+        img: "/lovable-uploads/poultry-risk-distribution.png",
+        description: t('projectDetail.poultry.riskDistribution')
       },
       {
-        img: "/lovable-uploads/cb758fdf-ac16-4a27-8c56-3b1a4c2521e9.png",
-        description: "Operator dashboard showing inventory utilization and production metrics with automated stock alerts"
+        img: "/lovable-uploads/poultry-inventory-utilization.png",
+        description: t('projectDetail.poultry.inventoryUtilization')
       }
     ],
     // Jewelry Shop
     [
       {
-        img: "/lovable-uploads/34b554d2-73e5-4d57-9f12-3556ff2c0ec3.png",
-        description: "Category summary view with margin comparison and product performance analysis"
+        img: "/lovable-uploads/jewelry-category-summary.png",
+        description: t('projectDetail.jewelry.categorySummary')
       },
       {
-        img: "/lovable-uploads/70c90f1f-cac5-495a-bf2d-4bd5ba39a938.png",
-        description: "Dashboard overview with key metrics including inventory value, stock status, and recent transactions"
+        img: "/lovable-uploads/jewelry-dashboard-overview.png",
+        description: t('projectDetail.jewelry.dashboardOverview')
       },
       {
-        img: "/lovable-uploads/21744730-27be-4a88-84fd-2fdb819c134e.png",
-        description: "Sales analysis with revenue tracking and category performance visualization"
+        img: "/lovable-uploads/jewelry-sales-analysis.png",
+        description: t('projectDetail.jewelry.salesAnalysis')
       },
       {
-        img: "/lovable-uploads/86fc0372-4c34-40da-a082-a1603cbe8258.png",
-        description: "Inventory valuation report with cost analysis, retail values, and profit margin calculations"
+        img: "/lovable-uploads/jewelry-inventory-valuation.png",
+        description: t('projectDetail.jewelry.inventoryValuation')
       }
     ]
   ];
 
   // Project thumbnail images (same as in ProjectsSection)
   const projectThumbnails = [
-    "/lovable-uploads/79970cd7-29c4-4c1c-8592-4cbf0c864572.png", // Medical Cabinet
-    "/lovable-uploads/820a8a3c-6704-45ab-ab2f-d293a8931031.png", // Poultry Management
-    "/lovable-uploads/6b7d5c59-5241-4d1c-8a20-3d595bcf0da2.png", // Jewelry Shop
+    "/lovable-uploads/cabinet-thumb.png", // Medical Cabinet
+    "/lovable-uploads/poultry-thumb.png", // Poultry Management
+    "/lovable-uploads/jewelry-thumb.png", // Jewelry Shop
   ];
 
   return (
@@ -145,7 +199,17 @@ const ProjectDetailPage = () => {
           <h1 className="text-4xl font-bold mb-4">
             {project.title}
           </h1>
+                    {/* Tech Stack Section */}
+                    <h2 className="text-2xl font-semibold mb-6">Technologies Used</h2>
           
+          <div className="flex flex-wrap gap-6 mb-12">
+            {techStacks[projectIndex].map((tech, index) => (
+              <div key={index} className="flex items-center gap-2 bg-secondary/20 px-4 py-2 rounded-full">
+                {tech.icon}
+                <span className="font-medium text-sm">{tech.name}</span>
+              </div>
+            ))}
+          </div>
           <div className="flex gap-2 flex-wrap mb-6">
             {project.tags.map((tag) => (
               <Badge key={tag} variant="secondary" className="bg-secondary/50">
@@ -159,7 +223,7 @@ const ProjectDetailPage = () => {
           </p>
           
           {/* Main project image */}
-          <Card className="overflow-hidden mb-12">
+          {/* <Card className="overflow-hidden mb-12">
             <AspectRatio ratio={16/9}>
               <img 
                 src={projectThumbnails[projectIndex]} 
@@ -168,18 +232,7 @@ const ProjectDetailPage = () => {
               />
             </AspectRatio>
           </Card>
-          
-          {/* Tech Stack Section */}
-          <h2 className="text-2xl font-semibold mb-6">Technologies Used</h2>
-          
-          <div className="flex flex-wrap gap-6 mb-12">
-            {techStacks[projectIndex].map((tech, index) => (
-              <div key={index} className="flex items-center gap-2 bg-secondary/20 px-4 py-2 rounded-full">
-                <span className="font-medium text-sm">{tech.name}</span>
-              </div>
-            ))}
-          </div>
-          
+           */}
           <h2 className="text-2xl font-semibold mb-6">Screenshots & Features</h2>
           
           <div className="grid grid-cols-1 gap-8 mb-16">

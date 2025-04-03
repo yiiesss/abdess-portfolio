@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "home": "Inicio",
@@ -161,5 +160,29 @@
     "es": "Español",
     "fr": "Francés",
     "ar": "Árabe"
+  },
+  "projectDetail": {
+    "backToProjects": "Volver a Proyectos",
+    "technologiesUsed": "Tecnologías Utilizadas",
+    "screenshotsFeatures": "Capturas de Pantalla y Características",
+    "cabinet": {
+      "financialOverview": "Panel de visión general financiera que muestra ingresos vs gastos con desgloses detallados por método de pago",
+      "expensesTracker": "Rastreador de gastos con gastos categorizados, visualizados con un gráfico circular interactivo para un análisis fácil",
+      "dailyAppointments": "Programador de citas diarias con registros de pacientes y seguimiento del estado de pago",
+      "documentEditor": "Editor de plantillas de documentos para crear recetas e informes médicos con inserción de variables del paciente"
+    },
+    "poultry": {
+      "supplierDetail": "Vista detallada del proveedor que muestra el saldo, las transacciones y los análisis financieros con monitoreo del umbral de riesgo",
+      "financialTimeline": "Línea de tiempo financiera e historial de transacciones con visualización de múltiples categorías para el análisis de tendencias",
+      "transactionListing": "Listado de transacciones con historial de pagos detallado y controles de gestión para proveedores",
+      "riskDistribution": "Panel de control administrativo con análisis de distribución de riesgos y monitoreo de estado crítico",
+      "inventoryUtilization": "Panel de control del operador que muestra la utilización del inventario y las métricas de producción con alertas de inventario automatizadas"
+    },
+    "jewelry": {
+      "categorySummary": "Vista resumida de la categoría con comparación de márgenes y análisis del rendimiento del producto",
+      "dashboardOverview": "Visión general del panel de control con métricas clave, incluido el valor del inventario, el estado del stock y las transacciones recientes",
+      "salesAnalysis": "Análisis de ventas con seguimiento de ingresos y visualización del rendimiento de la categoría",
+      "inventoryValuation": "Informe de valoración de inventario con análisis de costos, valores minoristas y cálculos de margen de beneficio"
+    }
   }
 }

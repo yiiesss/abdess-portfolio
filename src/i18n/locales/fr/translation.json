@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "home": "Accueil",
@@ -161,5 +160,29 @@
     "es": "Espagnol",
     "fr": "Français",
     "ar": "Arabe"
+  },
+  "projectDetail": {
+    "backToProjects": "Retour aux Projets",
+    "technologiesUsed": "Technologies Utilisées",
+    "screenshotsFeatures": "Captures d'Écran et Fonctionnalités",
+    "cabinet": {
+      "financialOverview": "Tableau de bord de vue d'ensemble financière montrant les revenus par rapport aux dépenses avec des ventilations détaillées par méthode de paiement",
+      "expensesTracker": "Suivi des dépenses avec des dépenses catégorisées, visualisées avec un graphique circulaire interactif pour une analyse facile",
+      "dailyAppointments": "Planificateur de rendez-vous quotidiens avec dossiers des patients et suivi de l'état des paiements",
+      "documentEditor": "Éditeur de modèles de documents pour créer des ordonnances et des rapports médicaux avec insertion de variables du patient"
+    },
+    "poultry": {
+      "supplierDetail": "Vue détaillée du fournisseur montrant le solde, les transactions et les analyses financières avec surveillance du seuil de risque",
+      "financialTimeline": "Chronologie financière et historique des transactions avec visualisation multi-catégories pour l'analyse des tendances",
+      "transactionListing": "Liste des transactions avec historique des paiements détaillé et contrôles de gestion pour les fournisseurs",
+      "riskDistribution": "Tableau de bord administratif avec analyse de la distribution des risques et surveillance de l'état critique",
+      "inventoryUtilization": "Tableau de bord de l'opérateur montrant l'utilisation des stocks et les métriques de production avec des alertes de stock automatisées"
+    },
+    "jewelry": {
+      "categorySummary": "Vue récapitulative de la catégorie avec comparaison des marges et analyse de la performance des produits",
+      "dashboardOverview": "Vue d'ensemble du tableau de bord avec des indicateurs clés, y compris la valeur des stocks, l'état des stocks et les transactions récentes",
+      "salesAnalysis": "Analyse des ventes avec suivi des revenus et visualisation de la performance de la catégorie",
+      "inventoryValuation": "Rapport d'évaluation des stocks avec analyse des coûts, valeurs de détail et calculs de marge bénéficiaire"
+    }
   }
 }

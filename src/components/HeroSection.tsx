@@ -1,13 +1,22 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GitBranch, Code, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+  const navigate = useNavigate();
   
+  const handleExploreProjectsClick = () => {
+    navigate('/projects');
+  };
+
+  const handleContactMeClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className="min-h-screen pt-20 flex flex-col justify-center relative overflow-hidden">
       {/* Background effect */}
@@ -32,17 +41,25 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <Button size="lg" className="animated-gradient font-medium">
+          <Button 
+            size="lg" 
+            className="animated-gradient font-medium"
+            onClick={handleExploreProjectsClick}
+          >
             {t('hero.exploreProjects')} 
             <ArrowRight className={`${isRTL ? 'mr-2 icon-flip' : 'ml-2'} h-4 w-4`} />
           </Button>
-          <Button variant="outline" size="lg">
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={handleContactMeClick}
+          >
             {t('hero.contactMe')}
           </Button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-          <div className="glass-card p-6 rounded-xl text-left">
+          <div className="glassexploorepro-card p-6 rounded-xl text-left">
             <Code className="h-10 w-10 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">{t('features.cleanCode.title')}</h3>
             <p className="text-foreground/70">{t('features.cleanCode.description')}</p>

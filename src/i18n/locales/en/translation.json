@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "home": "Home",
@@ -161,5 +160,29 @@
     "es": "Spanish",
     "fr": "French",
     "ar": "Arabic"
+  },
+  "projectDetail": {
+    "backToProjects": "Back to Projects",
+    "technologiesUsed": "Technologies Used",
+    "screenshotsFeatures": "Screenshots & Features",
+    "cabinet": {
+      "financialOverview": "Financial overview dashboard showing income vs expenses with detailed revenue breakdowns by payment method",
+      "expensesTracker": "Expenses tracker with categorized spending, visualized with an interactive pie chart for easy analysis",
+      "dailyAppointments": "Daily appointment scheduler with patient records and payment status tracking",
+      "documentEditor": "Document template editor for creating prescriptions and medical reports with patient variable insertion"
+    },
+    "poultry": {
+      "supplierDetail": "Supplier detail view showing balance, transactions, and financial analytics with risk threshold monitoring",
+      "financialTimeline": "Financial timeline and transaction history with multi-category visualization for trend analysis",
+      "transactionListing": "Transaction listing with detailed payment history and action controls for supplier management",
+      "riskDistribution": "Administrative dashboard with risk distribution analysis and critical status monitoring",
+      "inventoryUtilization": "Operator dashboard showing inventory utilization and production metrics with automated stock alerts"
+    },
+    "jewelry": {
+      "categorySummary": "Category summary view with margin comparison and product performance analysis",
+      "dashboardOverview": "Dashboard overview with key metrics including inventory value, stock status, and recent transactions",
+      "salesAnalysis": "Sales analysis with revenue tracking and category performance visualization",
+      "inventoryValuation": "Inventory valuation report with cost analysis, retail values, and profit margin calculations"
+    }
   }
 }

@@ -3,10 +3,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, WholeWordIcon, GlobeLockIcon, Globe2Icon, GlobeIcon } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { SiWhatsapp } from 'react-icons/si';
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -89,9 +90,9 @@ const ContactSection = () => {
                 </div>
                 <div className={isRTL ? 'text-right mr-4' : ''}>
                   <h3 className="font-medium text-lg mb-1">{t('contact.phone.title')}</h3>
-                  <p className="text-foreground/70">+212 661 141 101</p>
-                  <a href="tel:+212661141101" className="text-primary text-sm hover:underline mt-1 inline-block">
-                    {t('contact.phone.action')}
+                  <p className="text-foreground/70">+12363181214</p>
+                  <a href="https://wa.me/12363181214" className="text-primary text-sm hover:underline mt-1 inline-block" target="_blank" rel="noopener noreferrer">
+                    <SiWhatsapp className="inline-block w-4 h-4 mr-2" /> {t('contact.phone.action')}
                   </a>
                 </div>
               </div>
@@ -104,7 +105,7 @@ const ContactSection = () => {
                 </div>
                 <div className={isRTL ? 'text-right mr-4' : ''}>
                   <h3 className="font-medium text-lg mb-1">{t('contact.location.title')}</h3>
-                  <p className="text-foreground/70">Casablanca, Morocco</p>
+                  <p className="text-foreground/70"><GlobeIcon /> Worldwide</p>
                   <span className="text-primary text-sm mt-1 inline-block">
                     {t('contact.location.remote')}
                   </span>

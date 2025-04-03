@@ -1,6 +1,5 @@
-
 import { Github, Linkedin, Twitter } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -8,14 +7,20 @@ const Footer = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
   
+  const handleHomeClick = () => {
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="py-12 border-t border-white/10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link to="/" className="text-xl font-bold text-gradient-primary mb-4 inline-block">
-              Abdess's Portfolio
+              Linasio Portfolio
             </Link>
             <p className="text-foreground/70 mb-6 max-w-md">
               {t('footer.description')}
@@ -52,7 +57,10 @@ const Footer = () => {
             <h3 className="font-medium text-lg mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-foreground/70 hover:text-foreground transition-colors">
+                <Link to="/" onClick={(e) => {
+                  e.preventDefault();
+                  handleHomeClick();
+                }} className="text-foreground/70 hover:text-foreground transition-colors">
                   {t('navbar.home')}
                 </Link>
               </li>
