@@ -95,7 +95,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/50 text-sm">
-            © {currentYear} Abdess's Portfolio. {t('footer.rights')}
+            © {currentYear} linasio Portfolio. {t('footer.rights')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-foreground/50 hover:text-foreground/80 transition-colors">
